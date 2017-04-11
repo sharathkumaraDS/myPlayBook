@@ -1,0 +1,11 @@
+---
+- hosts: test
+  tasks:
+      - name: Create file
+        file: path=/tmp/sharath state=touch
+
+- hosts: all
+  sudo: yes
+  tasks:
+      - name: Create user ansible user
+        user: name=anuser shell=/bin/bash         		

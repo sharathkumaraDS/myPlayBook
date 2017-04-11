@@ -1,0 +1,6 @@
+---
+- hosts: test
+  sudo: yes 
+  tasks: 
+    - name: Install Mysql
+      apt: pkg=mysql-server state=latest
